@@ -5,7 +5,8 @@ on:
     # 每5分钟检查一次（UTC时间，+8就是北京时间）
     - cron: "*/5 * * * *"
   workflow_dispatch:  # 允许手动触发
-
+permissions:
+  contents: write
 jobs:
   check:
     runs-on: ubuntu-latest
